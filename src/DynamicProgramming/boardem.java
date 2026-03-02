@@ -20,8 +20,8 @@ public class boardem {
     }public static long helper(int x){
         if(x<0)return 0;
         if(dp[x]!=null)return dp[x];
-        long skip=helper(x-1);
-        long take=helper(x-2)+freq[x]*x;
+        long skip=helper(x-1);//skip
+        long take=helper(x-2)+freq[x]*x;//take 
         return dp[x]=Math.max(skip,take);
     }
 }
